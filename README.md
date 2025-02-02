@@ -1,14 +1,10 @@
-# マネージャー不在の組織は機能するのか？
+# これはなに？
 
-Ubieのホラクラシー組織についてのプレゼンテーション資料です。
+[こちらのnote記事](https://note.com/hashiyaman/n/nc83ac8198318)を、[Marp](https://marp.app/)を使用してプレゼンテーション資料を作成したものです。
 
-## 使い方
+# PDF変換方法
 
-このスライドは[Marp](https://marp.app/)を使用しています。
-
-### PDF変換方法
-
-以下のコマンドでPDFに変換できます：
+Marpをインストールし、以下のコマンドでPDFに変換できます。
 
 ```bash
 marp slide.md -o slide.pdf --pdf-notes --allow-local-files
