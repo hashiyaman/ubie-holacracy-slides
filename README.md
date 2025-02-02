@@ -6,5 +6,13 @@ Ubieのホラクラシー組織についてのプレゼンテーション資料�
 
 このスライドは[Marp](https://marp.app/)を使用しています。
 
-1. Marpをインストール
-2. `marp slide.md -o slide.pdf`でPDF出力
+### PDF変換方法
+
+以下のコマンドでPDFに変換できます：
+
+```bash
+marp slide.md -o slide.pdf --pdf-notes --allow-local-files
+```
+
+- `--pdf-notes`: プレゼンテーションモードでの出力
+- `--allow-local-files`: ローカルの画像ファイルを使用可能に
