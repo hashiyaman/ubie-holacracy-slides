@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Presentation slides using Marp",
   "scripts": {
-    "build": "marp slide.md -o slide.pdf --pdf-notes --allow-local-files",
+    "build": "marp slide.md -o slide.pdf --pdf-notes --allow-local-files --html --pdf-notes --chrome-args='--font-render-hinting=none'",
     "watch": "marp slide.md -w"
   },
   "devDependencies": {

@@ -14,6 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
+    - name: Install Japanese fonts
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
+    
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
@@ -23,7 +28,7 @@ jobs:
       run: npm install -g @marp-team/marp-cli
     
     - name: Generate PDF
-      run: marp slide.md -o slide.pdf --pdf-notes --allow-local-files
+      run: marp slide.md -o slide.pdf --pdf-notes --allow-local-files --html --pdf-notes --chrome-args='--font-render-hinting=none'
     
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4

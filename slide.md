@@ -7,7 +7,7 @@ header: 'マネージャー不在の組織は機能するのか？'
 <style>
 /* 基本スタイル */
 section {
-  font-family: 'Hiragino Sans', sans-serif;
+  font-family: 'Noto Sans CJK JP', 'Hiragino Sans', sans-serif;
   padding: 40px;
   font-size: 24px;
 }
