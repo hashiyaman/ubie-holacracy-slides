@@ -26,30 +26,57 @@ strong {
   color: #F777A6;
 }
 
-/* テーブルスタイル */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1em 0;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  text-align: left;
-}
-
-/* コンテナレイアウト */
+/* 共通レイアウト */
 .container {
   display: flex;
   gap: 40px;
 }
 
-.note {
+/* テーブル共通スタイル */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 18px;
+}
+
+th {
   background: #f5f5f5;
+  font-weight: bold;
+  padding: 16px;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 16px;
+  vertical-align: top;
+  line-height: 1.8;
+}
+
+/* ノート・サマリー共通スタイル */
+.note, .summary {
+  background: #f5f5f5;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.note {
   border-left: 4px solid #395ACC;
-  padding: 12px 20px;
+  font-size: 18px;
   margin-top: 20px;
+}
+
+.summary {
+  font-size: 22px;
+}
+
+/* ユーティリティクラス */
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
 }
 </style>
 
@@ -68,9 +95,7 @@ th, td {
 
 <style scoped>
 .container {
-  display: flex;
   align-items: flex-start;
-  gap: 40px;
 }
 .profile-image {
   flex-shrink: 0;
@@ -108,16 +133,10 @@ th, td {
 
 <style scoped>
 .container {
-  display: flex;
   align-items: center;
-  gap: 40px;
 }
 .structure-image {
-  flex-shrink: 0;
   text-align: center;
-}
-.structure-text {
-  flex-grow: 1;
 }
 .caption {
   font-size: 14px;
@@ -485,7 +504,7 @@ td {
 - カジュアル面談：https://recruit.ubie.life/casual-meeting
 
 ### お問い合わせ
-- X: [@hashiyaman](https://twitter.com/hashiyaman)
+- X: [@capyogu](https://twitter.com/capyogu)
 - Note: [note.com/hashiyaman](https://note.com/hashiyaman)
 
 </div>
