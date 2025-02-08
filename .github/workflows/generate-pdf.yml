@@ -29,12 +29,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: presentation-pdf
-        path: slide.pdf
-    
-    - name: Commit and push if changed
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add slide.pdf
-        git commit -m "Update PDF" || exit 0
-        git push 
+        path: slide.pdf 

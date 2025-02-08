@@ -1,2 +1,2 @@
 node_modules/
-# slide.pdfはコミットされるため、除外しない 
+*.pdf 
