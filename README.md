@@ -2,13 +2,29 @@
 
 [こちらのnote記事](https://note.com/hashiyaman/n/nc83ac8198318)を、[Marp](https://marp.app/)を使用してプレゼンテーション資料を作成したものです。
 
-# PDF変換方法
+# PDF生成方法
 
-Marpをインストールし、以下のコマンドでPDFに変換できます。
-
+## ローカルでの生成
 ```bash
-marp slide.md -o slide.pdf --pdf-notes --allow-local-files
+# 依存関係のインストール
+npm install
+
+# PDF生成
+npm run build
+
+# 開発時の自動更新（オプション）
+npm run watch
 ```
 
+## GitHub Actionsによる自動生成
+mainブランチにプッシュすると、以下のタイミングで自動的にPDFが生成されます：
+- `slide.md`が更新されたとき
+- `images/`ディレクトリ内のファイルが更新されたとき
+
+生成されたPDFは：
+1. GitHub Actionsの"Artifacts"からダウンロード可能
+2. リポジトリに自動的にコミットされる
+
+## コマンドオプション説明
 - `--pdf-notes`: プレゼンテーションモードでの出力
 - `--allow-local-files`: ローカルの画像ファイルを使用可能に
