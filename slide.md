@@ -503,7 +503,7 @@ td {
 - 総合採用サイト：https://recruit.ubie.life/#jobdescription
 - カジュアル面談：https://recruit.ubie.life/casual-meeting
 
-### お問い合わせ
+### 発表者へのお問い合わせ
 - X: [@capyogu](https://twitter.com/capyogu)
 - Note: [note.com/hashiyaman](https://note.com/hashiyaman)
 
