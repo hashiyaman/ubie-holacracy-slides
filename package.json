@@ -1,0 +1,12 @@
+{
+  "name": "presentation-slides",
+  "version": "1.0.0",
+  "description": "Presentation slides using Marp",
+  "scripts": {
+    "build": "marp slide.md -o slide.pdf --pdf-notes --allow-local-files",
+    "watch": "marp slide.md -w"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^3.0.0"
+  }
+} 

@@ -1,0 +1,40 @@
+name: Generate PDF
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'slide.md'
+      - 'images/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Install @marp-team/marp-cli
+      run: npm install -g @marp-team/marp-cli
+    
+    - name: Generate PDF
+      run: marp slide.md -o slide.pdf --pdf-notes --allow-local-files
+    
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: presentation-pdf
+        path: slide.pdf
+    
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add slide.pdf
+        git commit -m "Update PDF" || exit 0
+        git push 
